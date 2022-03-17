@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from appfamilia.views import familiar
-from familiares.views import carga
+from familiares.views import personas, personas_dni
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('nuevofamiliar/<dni>/<nombre>/<apellido>/<email>/<fecha_nacimiento>', familiar),
-    path('carga/<nombre>/<apellido>/', carga),
+    #path('carga/<nombre>/<apellido>/', carga),
+    path('muestra/', personas),
+    path('muestra_dni/<dni>/', personas_dni),
 ]

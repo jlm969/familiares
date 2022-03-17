@@ -7,14 +7,13 @@
     <title>Titulo</title>
 </head>
 <body>
-    <h1> FAMILIARES </h1>  
-    <p></p>
-   <ul>
-        <p>Listado de Familiares:</p>
-        {% for familiar in listado %}
-            <p> <li>{{familiar}}</li></p> 
-        {% endfor %}
-    </ul>
-
+        <h1> FAMILIARES </h1>  
+        <p></p>
+       <ul>
+            <p>Listado de Familiares:</p>
+            {% for familiar in listado %}
+                <p> <li>DNI: {{familiar.dni}}  APELLIDO y NOMBRE: {{familiar.apellido}}, {{familiar.nombre}}   EMAIL: {{familiar.email}}</li></p> 
+            {% endfor %}
+        </ul>
 </body>
 </html>
